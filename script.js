@@ -21,6 +21,9 @@ function writePassword() {
 
 
   var charLow = prompt("Do you want lowercase characters? yes/no")
+
+  var charLow = charLow.toLowerCase();
+
   if (charLow == "yes"){
     var charLowVals = "abcdefghijklmnopqrstuvwxyz";
     var passwordCharset = passwordCharset.concat(charLowVals);
@@ -28,12 +31,14 @@ function writePassword() {
 
 
   var charUp = prompt("Do you want uppercase characters? yes/no")
+  var charUp = charUp.toLowerCase();
   if (charUp == "yes") {
     var charUPVals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var passwordCharset = passwordCharset.concat(charUPVals);
   }
 
   var charNum = prompt("Do you want numberic characters? yes/no ")
+  var charNum = charNum.toLowerCase();
   if (charNum == "yes") {
   var charNUMVals = "0123456789";
   var passwordCharset = passwordCharset.concat(charNUMVals);
@@ -41,6 +46,7 @@ function writePassword() {
 
 
   var charSpecial = prompt("Do you want special characters? yes/no")
+  var charSpecial = charSpecial.toLowerCase();
   if (charSpecial == "yes") {
     var charSPECVals = "!@#$%^&*()";    
     var passwordCharset = passwordCharset.concat(charSPECVals);
