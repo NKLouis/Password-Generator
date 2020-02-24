@@ -21,9 +21,7 @@ function writePassword() {
 
 
   var charLow = prompt("Do you want lowercase characters? yes/no")
-
   var charLow = charLow.toLowerCase();
-
   if (charLow == "yes"){
     var charLowVals = "abcdefghijklmnopqrstuvwxyz";
     var passwordCharset = passwordCharset.concat(charLowVals);
