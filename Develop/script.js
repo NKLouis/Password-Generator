@@ -13,21 +13,40 @@ function writePassword() {
   if( charAmount <8 || charAmount >128) {
     alert("Password must include a minimum of 8 characters and no more than 128 characters.");
    
-    if (charAmount) {
-      prompt("How many chracters do you want? ")
-    }
+  return;
   }
 
-  var charLow = confirm("Do you want lowercase characters?")
+  var passwordCharset = "";
+ 
 
-  var charUp = confirm("Do you want uppercase characters? ")
 
-  var charNum = confirm("Do you want numberic characters? ")
+  var charLow = prompt("Do you want lowercase characters? yes/no")
+  if (charLow == "yes"){
+    var charLowVals = "abcdefghijklmnopqrstuvwxyz";
+    var passwordCharset = passwordCharset.concat(charLowVals);
+  }
 
-  var charSpecial = confirm("Do you want special characters? ")
+
+  var charUp = prompt("Do you want uppercase characters? yes/no")
+  if (charUp == "yes") {
+    var charUPVals = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var passwordCharset = passwordCharset.concat(charUPVals);
+  }
+
+  var charNum = prompt("Do you want numberic characters? yes/no ")
+  if (charNum == "yes") {
+  var charNUMVals = "0123456789";
+  var passwordCharset = passwordCharset.concat(charNUMVals);
+  }
+
+
+  var charSpecial = prompt("Do you want special characters? yes/no")
+  if (charSpecial == "yes") {
+    var charSPECVals = "!@#$%^&*()";    
+    var passwordCharset = passwordCharset.concat(charSPECVals);
+    }
     
-
-  var passwordCharset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@!%&()/";
+    
   passwordValue = "";
   for ( var i = 0, n = passwordCharset.length; i < charAmount; ++i) {
    passwordValue += passwordCharset.charAt(Math.floor(Math.random() * n ));
@@ -35,6 +54,7 @@ function writePassword() {
 
   document.getElementById("password").value = passwordValue;
  
+
  return;
 }
 
