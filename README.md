@@ -4,8 +4,8 @@
 
 ## Live Link
   https://nklouis.github.io/Password-Generator/
-  
-![](http://g.recordit.co/r5rUjavk6m.giff)
+
+![](http://g.recordit.co/r5rUjavk6m.gif)
 
 
 ## Contributor
