@@ -1,11 +1,14 @@
 # Password-Generator
  
-
-
 ## Live Link
   https://nklouis.github.io/Password-Generator/
 
+
+## Description
+ an application that generates a random password based on user-selected criteria.
+
 ![](http://g.recordit.co/r5rUjavk6m.gif)
+
 
 
 ## Contributor
